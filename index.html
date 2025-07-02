@@ -1,927 +1,1448 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GLONECT - Инновационные IT-решения</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="modern-style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="modern-style.css" />
     <style>
-        /* Override some Tailwind defaults for Apple-style design */
-        .text-gradient {
-            background: linear-gradient(90deg, #000000 0%, #1a1a1a 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+      /* Override some Tailwind defaults for Apple-style design */
+      .text-gradient {
+        background: linear-gradient(90deg, #000000 0%, #1a1a1a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
     </style>
-</head>
-<body class="font-sans antialiased text-gray-900 bg-white">
+  </head>
+  <body class="font-sans antialiased text-gray-900 bg-white">
     <!-- Header -->
     <header class="fixed w-full z-50 header-blur transition-all duration-300">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <img src="1.jpg" alt="GLONECT Logo" class="h-10 w-auto">
-                <span class="text-xl font-semibold tracking-tight">GLONECT</span>
-            </div>
-            
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link active">Главная</a>
-                <a href="#services" class="nav-link">Услуги</a>
-                <a href="#about" class="nav-link">О нас</a>
-                <a href="#portfolio" class="nav-link">Портфолио</a>
-                <a href="#blog" class="nav-link">Блог</a>
-                <a href="#contact" class="nav-link">Контакты</a>
-            </nav>
-            
-            <div class="hidden md:block">
-                <a href="#contact" class="btn btn-primary">Связаться</a>
-            </div>
-            
-            <button class="md:hidden focus:outline-none" id="menu-btn">
-                <i class="fas fa-bars text-gray-600 text-xl"></i>
-            </button>
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-2 relative">
+          <!-- <img src="new.jpg" alt="GLONECT Logo" class="h-10 w-auto" />
+          <span class="text-xl font-semibold tracking-tight">GLONECT</span> -->
+          <img
+            src="logo-only.png"
+            alt="GLONECT Logo"
+            class="h-10 w-auto absolute"
+            style="left: -10px"
+          />
+          <img src="text-only.png" alt="GLONECT Logo" class="h-10 w-auto" />
         </div>
-        
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-white w-full absolute left-0 mt-3 shadow-lg py-2" id="mobile-menu">
-            <a href="#home" class="block px-6 py-2 text-blue-600 font-medium">Главная</a>
-            <a href="#services" class="block px-6 py-2 text-gray-600 hover:text-blue-600">Услуги</a>
-            <a href="#about" class="block px-6 py-2 text-gray-600 hover:text-blue-600">О нас</a>
-            <a href="#portfolio" class="block px-6 py-2 text-gray-600 hover:text-blue-600">Портфолио</a>
-            <a href="#blog" class="block px-6 py-2 text-gray-600 hover:text-blue-600">Блог</a>
-            <a href="#contact" class="block px-6 py-2 text-gray-600 hover:text-blue-600">Контакты</a>
-            <a href="#contact" class="block px-6 py-2 mx-4 mt-2 bg-blue-600 text-white rounded-lg text-center font-medium">Связаться</a>
+
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link active">Главная</a>
+          <a href="#services" class="nav-link">Услуги</a>
+          <a href="#about" class="nav-link">О нас</a>
+          <a href="#portfolio" class="nav-link">Портфолио</a>
+          <a href="#blog" class="nav-link">Блог</a>
+          <a href="#contact" class="nav-link">Контакты</a>
+        </nav>
+
+        <div class="hidden md:block">
+          <a href="#contact" class="btn btn-primary">Связаться</a>
         </div>
+
+        <button class="md:hidden focus:outline-none" id="menu-btn">
+          <i class="fas fa-bars text-gray-600 text-xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="md:hidden hidden bg-white w-full absolute left-0 mt-3 shadow-lg py-2"
+        id="mobile-menu"
+      >
+        <a href="#home" class="block px-6 py-2 text-blue-600 font-medium"
+          >Главная</a
+        >
+        <a
+          href="#services"
+          class="block px-6 py-2 text-gray-600 hover:text-blue-600"
+          >Услуги</a
+        >
+        <a
+          href="#about"
+          class="block px-6 py-2 text-gray-600 hover:text-blue-600"
+          >О нас</a
+        >
+        <a
+          href="#portfolio"
+          class="block px-6 py-2 text-gray-600 hover:text-blue-600"
+          >Портфолио</a
+        >
+        <a
+          href="#blog"
+          class="block px-6 py-2 text-gray-600 hover:text-blue-600"
+          >Блог</a
+        >
+        <a
+          href="#contact"
+          class="block px-6 py-2 text-gray-600 hover:text-blue-600"
+          >Контакты</a
+        >
+        <a
+          href="#contact"
+          class="block px-6 py-2 mx-4 mt-2 bg-blue-600 text-white rounded-lg text-center font-medium"
+          >Связаться</a
+        >
+      </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero-gradient pt-40 pb-20 overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-5xl mx-auto mb-16 animate-fade-in">
-                <h1 class="font-bold leading-tight mb-6">
-                    Инновационные <span class="text-gradient">IT-решения</span><br>
-                    для вашего бизнеса
-                </h1>
-                <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
-                    Мы объединяем технологии и стратегии, чтобы помочь вашему бизнесу достичь новых высот в цифровом мире.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact" class="btn btn-primary btn-large">Начать проект</a>
-                    <a href="#services" class="btn btn-secondary btn-large">Наши услуги</a>
-                </div>
-            </div>
-            <div class="relative max-w-6xl mx-auto animate-fade-in-scale" style="animation-delay: 0.3s;">
-                <img src="digital-solutions.jpg" alt="Digital Solutions" class="rounded-2xl shadow-2xl w-full">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center max-w-5xl mx-auto mb-16 animate-fade-in">
+          <h1 class="font-bold leading-tight mb-6">
+            Инновационные <span class="text-gradient">IT-решения</span><br />
+            для вашего бизнеса
+          </h1>
+          <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto">
+            Мы объединяем технологии и стратегии, чтобы помочь вашему бизнесу
+            достичь новых высот в цифровом мире.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contact" class="btn btn-primary btn-large"
+              >Начать проект</a
+            >
+            <a href="#services" class="btn btn-secondary btn-large"
+              >Наши услуги</a
+            >
+          </div>
         </div>
+        <div
+          class="relative max-w-6xl mx-auto animate-fade-in-scale"
+          style="animation-delay: 0.3s"
+        >
+          <img
+            src="digital-solutions.jpg"
+            alt="Digital Solutions"
+            class="rounded-2xl shadow-2xl w-full"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"
+          ></div>
+        </div>
+      </div>
     </section>
 
     <!-- Stats Section -->
     <section class="section bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div class="stat-card scroll-fade-in">
-                    <h3 class="stat-number">250+</h3>
-                    <p class="text-gray-600 mt-2">Завершенных проектов</p>
-                </div>
-                <div class="stat-card scroll-fade-in" style="animation-delay: 0.1s;">
-                    <h3 class="stat-number">120+</h3>
-                    <p class="text-gray-600 mt-2">Довольных клиентов</p>
-                </div>
-                <div class="stat-card scroll-fade-in" style="animation-delay: 0.2s;">
-                    <h3 class="stat-number">15+</h3>
-                    <p class="text-gray-600 mt-2">Стран присутствия</p>
-                </div>
-                <div class="stat-card scroll-fade-in" style="animation-delay: 0.3s;">
-                    <h3 class="stat-number">28</h3>
-                    <p class="text-gray-600 mt-2">Наград</p>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div class="stat-card scroll-fade-in">
+            <h3 class="stat-number">250+</h3>
+            <p class="text-gray-600 mt-2">Завершенных проектов</p>
+          </div>
+          <div class="stat-card scroll-fade-in" style="animation-delay: 0.1s">
+            <h3 class="stat-number">120+</h3>
+            <p class="text-gray-600 mt-2">Довольных клиентов</p>
+          </div>
+          <div class="stat-card scroll-fade-in" style="animation-delay: 0.2s">
+            <h3 class="stat-number">15+</h3>
+            <p class="text-gray-600 mt-2">Стран присутствия</p>
+          </div>
+          <div class="stat-card scroll-fade-in" style="animation-delay: 0.3s">
+            <h3 class="stat-number">28</h3>
+            <p class="text-gray-600 mt-2">Наград</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="section-large bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-20 scroll-fade-in">
-                <h2 class="font-bold mb-4">Наши услуги</h2>
-                <p class="text-xl max-w-2xl mx-auto text-gray-600">Комплексные решения для цифровой трансформации вашего бизнеса</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="feature-card scroll-fade-in hover-lift">
-                    <div class="icon-hover w-12 h-12 text-2xl text-gray-800 mb-6">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Веб-разработка</h3>
-                    <p class="text-gray-600 mb-4 leading-relaxed">Создаем современные, адаптивные и высоконагруженные веб-приложения с использованием новейших технологий.</p>
-                    <ul class="space-y-2 text-sm text-gray-600">
-                        <li>• Корпоративные сайты</li>
-                        <li>• Интернет-магазины</li>
-                        <li>• Веб-порталы</li>
-                    </ul>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 h-full">
-                    <div class="p-6">
-                        <div class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 transition duration-700">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Мобильные приложения</h3>
-                        <p class="text-gray-600 mb-4">Разрабатываем кроссплатформенные мобильные приложения с нативным UX/UI для iOS и Android.</p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Гибридные приложения</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Нативные приложения</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>PWA приложения</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 h-full">
-                    <div class="p-6">
-                        <div class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 transition duration-700">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Облачные решения</h3>
-                        <p class="text-gray-600 mb-4">Предоставляем полный цикл услуг по миграции, развертыванию и поддержке облачных инфраструктур.</p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Частные облака</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Гибридные решения</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Контейнеризация</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 h-full">
-                    <div class="p-6">
-                        <div class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 transition duration-700">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Data Science & AI</h3>
-                        <p class="text-gray-600 mb-4">Разрабатываем решения на основе искусственного интеллекта и анализа данных для автоматизации процессов.</p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Анализ данных</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Машинное обучение</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Компьютерное зрение</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 h-full">
-                    <div class="p-6">
-                        <div class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 transition duration-700">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Кибербезопасность</h3>
-                        <p class="text-gray-600 mb-4">Обеспечиваем комплексную защиту ваших цифровых активов и данных от современных кибератак.</p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Аудит безопасности</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>DLP системы</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Пентестинг</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 h-full">
-                    <div class="p-6">
-                        <div class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 transition duration-700">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Техподдержка</h3>
-                        <p class="text-gray-600 mb-4">Предоставляем круглосуточную техническую поддержку и сопровождение ваших IT-систем.</p>
-                        <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>24/7 мониторинг</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Helpdesk</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                                <span>Incident Management</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20 scroll-fade-in">
+          <h2 class="font-bold mb-4">Наши услуги</h2>
+          <p class="text-xl max-w-2xl mx-auto text-gray-600">
+            Комплексные решения для цифровой трансформации вашего бизнеса
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="feature-card scroll-fade-in hover-lift">
+            <div class="icon-hover w-12 h-12 text-2xl text-gray-800 mb-6">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Веб-разработка
+            </h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              Создаем современные, адаптивные и высоконагруженные веб-приложения
+              с использованием новейших технологий.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>• Корпоративные сайты</li>
+              <li>• Интернет-магазины</li>
+              <li>• Веб-порталы</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 h-full"
+          >
+            <div class="p-6">
+              <div
+                class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 transition duration-700"
+              >
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Мобильные приложения
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Разрабатываем кроссплатформенные мобильные приложения с нативным
+                UX/UI для iOS и Android.
+              </p>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Гибридные приложения</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Нативные приложения</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>PWA приложения</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 h-full"
+          >
+            <div class="p-6">
+              <div
+                class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 transition duration-700"
+              >
+                <i class="fas fa-cloud"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Облачные решения
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Предоставляем полный цикл услуг по миграции, развертыванию и
+                поддержке облачных инфраструктур.
+              </p>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Частные облака</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Гибридные решения</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Контейнеризация</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 h-full"
+          >
+            <div class="p-6">
+              <div
+                class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 transition duration-700"
+              >
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Data Science & AI
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Разрабатываем решения на основе искусственного интеллекта и
+                анализа данных для автоматизации процессов.
+              </p>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Анализ данных</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Машинное обучение</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Компьютерное зрение</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 h-full"
+          >
+            <div class="p-6">
+              <div
+                class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 transition duration-700"
+              >
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">
+                Кибербезопасность
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Обеспечиваем комплексную защиту ваших цифровых активов и данных
+                от современных кибератак.
+              </p>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Аудит безопасности</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>DLP системы</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Пентестинг</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="service-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-500 h-full"
+          >
+            <div class="p-6">
+              <div
+                class="service-icon w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 text-2xl mb-6 transition duration-700"
+              >
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Техподдержка</h3>
+              <p class="text-gray-600 mb-4">
+                Предоставляем круглосуточную техническую поддержку и
+                сопровождение ваших IT-систем.
+              </p>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>24/7 мониторинг</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Helpdesk</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                  <span>Incident Management</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
-                    <span class="text-blue-600 font-medium text-sm uppercase tracking-wide">О КОМПАНИИ</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">GLONECT - ваш надежный ИТ-партнер</h2>
-                    <p class="text-gray-600 mb-6">GLONECT - это команда опытных профессионалов в области информационных технологий, объединяющая экспертов в различных направлениях цифровизации бизнеса.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex">
-                            <div class="flex-shrink-0 text-blue-600 mr-4 mt-1">
-                                <i class="fas fa-check-circle text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-medium text-gray-800 mb-1">15 лет опыта</h4>
-                                <p class="text-gray-600">Мы работаем на рынке IT-услуг с 2008 года, постоянно развиваясь и совершенствуя наши компетенции.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex">
-                            <div class="flex-shrink-0 text-blue-600 mr-4 mt-1">
-                                <i class="fas fa-check-circle text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-medium text-gray-800 mb-1">80+ специалистов</h4>
-                                <p class="text-gray-600">В нашей команде работают сертифицированные специалисты с опытом реализации сложных проектов.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex">
-                            <div class="flex-shrink-0 text-blue-600 mr-4 mt-1">
-                                <i class="fas fa-check-circle text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-medium text-gray-800 mb-1">Собственные разработки</h4>
-                                <p class="text-gray-600">Мы создали несколько собственных продуктов, которые помогают нашим клиентам автоматизировать бизнес-процессы.</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+            <span
+              class="text-blue-600 font-medium text-sm uppercase tracking-wide"
+              >О КОМПАНИИ</span
+            >
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-6">
+              GLONECT - ваш надежный ИТ-партнер
+            </h2>
+            <p class="text-gray-600 mb-6">
+              GLONECT - это команда опытных профессионалов в области
+              информационных технологий, объединяющая экспертов в различных
+              направлениях цифровизации бизнеса.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex">
+                <div class="flex-shrink-0 text-blue-600 mr-4 mt-1">
+                  <i class="fas fa-check-circle text-xl"></i>
                 </div>
-                
-                <div class="md:w-1/2 relative">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Our Team" class="rounded-lg shadow-xl">
-                    
-                    <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-lg shadow-lg hidden md:block">
-                        <div class="flex items-center">
-                            <div class="text-blue-600 mr-4">
-                                <i class="fas fa-trophy text-3xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-2xl font-bold">28+</h3>
-                                <p class="text-gray-600">Наград в IT-сфере</p>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                  <h4 class="text-lg font-medium text-gray-800 mb-1">
+                    15 лет опыта
+                  </h4>
+                  <p class="text-gray-600">
+                    Мы работаем на рынке IT-услуг с 2008 года, постоянно
+                    развиваясь и совершенствуя наши компетенции.
+                  </p>
                 </div>
+              </div>
+
+              <div class="flex">
+                <div class="flex-shrink-0 text-blue-600 mr-4 mt-1">
+                  <i class="fas fa-check-circle text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium text-gray-800 mb-1">
+                    80+ специалистов
+                  </h4>
+                  <p class="text-gray-600">
+                    В нашей команде работают сертифицированные специалисты с
+                    опытом реализации сложных проектов.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex">
+                <div class="flex-shrink-0 text-blue-600 mr-4 mt-1">
+                  <i class="fas fa-check-circle text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium text-gray-800 mb-1">
+                    Собственные разработки
+                  </h4>
+                  <p class="text-gray-600">
+                    Мы создали несколько собственных продуктов, которые помогают
+                    нашим клиентам автоматизировать бизнес-процессы.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="md:w-1/2 relative">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="Our Team"
+              class="rounded-lg shadow-xl"
+            />
+
+            <div
+              class="absolute -bottom-8 -left-8 bg-white p-6 rounded-lg shadow-lg hidden md:block"
+            >
+              <div class="flex items-center">
+                <div class="text-blue-600 mr-4">
+                  <i class="fas fa-trophy text-3xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-bold">28+</h3>
+                  <p class="text-gray-600">Наград в IT-сфере</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Expertise Section -->
     <section class="py-20 bg-gray-900 text-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-blue-400 font-medium">НАШИ ЭКСПЕРТНЫЕ ОБЛАСТИ</span>
-                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Технологии, которые мы используем</h2>
-                <p class="max-w-2xl mx-auto text-gray-400">Мы работаем с широким спектром современных технологий, выбирая наилучшие инструменты для решения ваших задач.</p>
-            </div>
-            
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" alt="React" class="h-12 mb-4">
-                    <span class="font-medium">React</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" alt="Angular" class="h-12 mb-4">
-                    <span class="font-medium">Angular</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/vue-9.svg" alt="Vue" class="h-12 mb-4">
-                    <span class="font-medium">Vue.js</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" alt="Node.js" class="h-12 mb-4">
-                    <span class="font-medium">Node.js</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="Python" class="h-12 mb-4">
-                    <span class="font-medium">Python</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/dotnet.svg" alt=".NET" class="h-12 mb-4">
-                    <span class="font-medium">.NET</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="Docker" class="h-12 mb-4">
-                    <span class="font-medium">Docker</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS" class="h-12 mb-4">
-                    <span class="font-medium">AWS</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg" alt="Google Cloud" class="h-12 mb-4">
-                    <span class="font-medium">Google Cloud</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/azure-2.svg" alt="Azure" class="h-12 mb-4">
-                    <span class="font-medium">Azure</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/flutter-logo.svg" alt="Flutter" class="h-12 mb-4">
-                    <span class="font-medium">Flutter</span>
-                </div>
-                <div class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition">
-                    <img src="https://cdn.worldvectorlogo.com/logos/tensorflow-2.svg" alt="TensorFlow" class="h-12 mb-4">
-                    <span class="font-medium">TensorFlow</span>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-blue-400 font-medium">НАШИ ЭКСПЕРТНЫЕ ОБЛАСТИ</span>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">
+            Технологии, которые мы используем
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-400">
+            Мы работаем с широким спектром современных технологий, выбирая
+            наилучшие инструменты для решения ваших задач.
+          </p>
         </div>
+
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"
+        >
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/react-2.svg"
+              alt="React"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">React</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg"
+              alt="Angular"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">Angular</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/vue-9.svg"
+              alt="Vue"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">Vue.js</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
+              alt="Node.js"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">Node.js</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/python-5.svg"
+              alt="Python"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">Python</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/dotnet.svg"
+              alt=".NET"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">.NET</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/docker.svg"
+              alt="Docker"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">Docker</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/aws-2.svg"
+              alt="AWS"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">AWS</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg"
+              alt="Google Cloud"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">Google Cloud</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/azure-2.svg"
+              alt="Azure"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">Azure</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/flutter-logo.svg"
+              alt="Flutter"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">Flutter</span>
+          </div>
+          <div
+            class="bg-gray-800 rounded-lg p-6 flex flex-col items-center hover:bg-blue-600 transition"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/tensorflow-2.svg"
+              alt="TensorFlow"
+              class="h-12 mb-4"
+            />
+            <span class="font-medium">TensorFlow</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-blue-600 font-medium">НАШИ РАБОТЫ</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-4">Недавние проекты</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Вот несколько примеров наших работ, которые демонстрируют наш профессионализм и подход к реализации проектов.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Project" class="w-full h-64 object-cover transition duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30 p-6 flex flex-col justify-end">
-                        <h3 class="text-xl font-bold text-white mb-2">Корпоративный портал</h3>
-                        <p class="text-gray-300 mb-4">Разработка единой цифровой платформы для крупного ритейлера</p>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center">
-                            Подробнее <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Project" class="w-full h-64 object-cover transition duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30 p-6 flex flex-col justify-end">
-                        <h3 class="text-xl font-bold text-white mb-2">Мобильное приложение</h3>
-                        <p class="text-gray-300 mb-4">Приложение для фитнес-клуба с AR функционалом</p>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center">
-                            Подробнее <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="relative group overflow-hidden rounded-xl shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Project" class="w-full h-64 object-cover transition duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30 p-6 flex flex-col justify-end">
-                        <h3 class="text-xl font-bold text-white mb-2">Интернет-магазин</h3>
-                        <p class="text-gray-300 mb-4">Высоконагруженный маркетплейс с персонализацией</p>
-                        <a href="#" class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center">
-                            Подробнее <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#" class="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg">
-                    Посмотреть все проекты <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-medium">НАШИ РАБОТЫ</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-4">
+            Недавние проекты
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Вот несколько примеров наших работ, которые демонстрируют наш
+            профессионализм и подход к реализации проектов.
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="relative group overflow-hidden rounded-xl shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="Project"
+              class="w-full h-64 object-cover transition duration-700 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30 p-6 flex flex-col justify-end"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">
+                Корпоративный портал
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Разработка единой цифровой платформы для крупного ритейлера
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+              >
+                Подробнее <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="relative group overflow-hidden rounded-xl shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="Project"
+              class="w-full h-64 object-cover transition duration-700 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30 p-6 flex flex-col justify-end"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">
+                Мобильное приложение
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Приложение для фитнес-клуба с AR функционалом
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+              >
+                Подробнее <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="relative group overflow-hidden rounded-xl shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+              alt="Project"
+              class="w-full h-64 object-cover transition duration-700 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/30 p-6 flex flex-col justify-end"
+            >
+              <h3 class="text-xl font-bold text-white mb-2">
+                Интернет-магазин
+              </h3>
+              <p class="text-gray-300 mb-4">
+                Высоконагруженный маркетплейс с персонализацией
+              </p>
+              <a
+                href="#"
+                class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center"
+              >
+                Подробнее <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg"
+          >
+            Посмотреть все проекты <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-blue-600 font-medium">ОТЗЫВЫ КЛИЕНТОВ</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-4">Что говорят о нас наши клиенты</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center mb-6">
-                        <div class="text-yellow-400 mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">"Команда GLONECT выполнила проект по разработке корпоративного портала на высоком уровне. Профессиональный подход, отличная коммуникация и соблюдение сроков."</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-medium text-gray-800">Михаил Соколов</h4>
-                            <p class="text-gray-500 text-sm">Директор по IT, RetailGroup</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center mb-6">
-                        <div class="text-yellow-400 mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">"Заказывали разработку мобильного приложения. Результат превзошел ожидания! Приложение выглядит и работает отлично. Будем обращаться снова."</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-medium text-gray-800">Анна Кузнецова</h4>
-                            <p class="text-gray-500 text-sm">CEO, FitnessPro</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center mb-6">
-                        <div class="text-yellow-400 mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">"Миграция в облако прошла гладко и без простоев. Спасибо за профессионализм и подробные консультации на каждом этапе проекта."</p>
-                    <div class="flex items-center">
-                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
-                        <div>
-                            <h4 class="font-medium text-gray-800">Дмитрий Иванов</h4>
-                            <p class="text-gray-500 text-sm">CTO, Logistic Solutions</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-medium">ОТЗЫВЫ КЛИЕНТОВ</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-4">
+            Что говорят о нас наши клиенты
+          </h2>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="flex items-center mb-6">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "Команда GLONECT выполнила проект по разработке корпоративного
+              портала на высоком уровне. Профессиональный подход, отличная
+              коммуникация и соблюдение сроков."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Client"
+                class="w-12 h-12 rounded-full mr-4 object-cover"
+              />
+              <div>
+                <h4 class="font-medium text-gray-800">Михаил Соколов</h4>
+                <p class="text-gray-500 text-sm">Директор по IT, RetailGroup</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="flex items-center mb-6">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "Заказывали разработку мобильного приложения. Результат превзошел
+              ожидания! Приложение выглядит и работает отлично. Будем обращаться
+              снова."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Client"
+                class="w-12 h-12 rounded-full mr-4 object-cover"
+              />
+              <div>
+                <h4 class="font-medium text-gray-800">Анна Кузнецова</h4>
+                <p class="text-gray-500 text-sm">CEO, FitnessPro</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="flex items-center mb-6">
+              <div class="text-yellow-400 mr-2">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="text-gray-600 mb-6">
+              "Миграция в облако прошла гладко и без простоев. Спасибо за
+              профессионализм и подробные консультации на каждом этапе проекта."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://randomuser.me/api/portraits/men/75.jpg"
+                alt="Client"
+                class="w-12 h-12 rounded-full mr-4 object-cover"
+              />
+              <div>
+                <h4 class="font-medium text-gray-800">Дмитрий Иванов</h4>
+                <p class="text-gray-500 text-sm">CTO, Logistic Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Blog Section -->
     <section id="blog" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-blue-600 font-medium">НАШ БЛОГ</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-4">Последние публикации</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Делимся знаниями и новостями из мира IT, цифровой трансформации и технологических трендов.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Post 1 -->
-                <article class="group">
-                    <div class="relative overflow-hidden rounded-t-xl h-64">
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Post" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                    </div>
-                    <div class="bg-white p-6 rounded-b-xl shadow-md">
-                        <div class="flex items-center text-sm text-gray-500 mb-3">
-                            <span>15 июня 2023</span>
-                            <span class="mx-2">•</span>
-                            <span>5 мин. чтения</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition">Будущее смешанной реальности в бизнесе</h3>
-                        <p class="text-gray-600 mb-4">Как технологии AR и VR трансформируют подходы к обучению, продажам и обслуживанию клиентов.</p>
-                        <a href="#" class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800">
-                            Читать статью <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </article>
-                
-                <!-- Post 2 -->
-                <article class="group">
-                    <div class="relative overflow-hidden rounded-t-xl h-64">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Post" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                    </div>
-                    <div class="bg-white p-6 rounded-b-xl shadow-md">
-                        <div class="flex items-center text-sm text-gray-500 mb-3">
-                            <span>5 июня 2023</span>
-                            <span class="mx-2">•</span>
-                            <span>7 мин. чтения</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition">5 ключевых трендов кибербезопасности в 2023</h3>
-                        <p class="text-gray-600 mb-4">Разбираем главные угрозы цифровой безопасности и меры защиты для малого и среднего бизнеса.</p>
-                        <a href="#" class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800">
-                            Читать статью <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </article>
-                
-                <!-- Post 3 -->
-                <article class="group">
-                    <div class="relative overflow-hidden rounded-t-xl h-64">
-                        <img src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Post" class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                    </div>
-                    <div class="bg-white p-6 rounded-b-xl shadow-md">
-                        <div class="flex items-center text-sm text-gray-500 mb-3">
-                            <span>24 мая 2023</span>
-                            <span class="mx-2">•</span>
-                            <span>4 мин. чтения</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition">Как выбрать между SPA и PWA для вашего бизнеса</h3>
-                        <p class="text-gray-600 mb-4">Сравниваем современные подходы к веб-разработке и помогаем выбрать оптимальное решение.</p>
-                        <a href="#" class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800">
-                            Читать статью <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </article>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-medium">НАШ БЛОГ</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-4">
+            Последние публикации
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Делимся знаниями и новостями из мира IT, цифровой трансформации и
+            технологических трендов.
+          </p>
         </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Post 1 -->
+          <article class="group">
+            <div class="relative overflow-hidden rounded-t-xl h-64">
+              <img
+                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Post"
+                class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+              />
+            </div>
+            <div class="bg-white p-6 rounded-b-xl shadow-md">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>15 июня 2023</span>
+                <span class="mx-2">•</span>
+                <span>5 мин. чтения</span>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition"
+              >
+                Будущее смешанной реальности в бизнесе
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Как технологии AR и VR трансформируют подходы к обучению,
+                продажам и обслуживанию клиентов.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800"
+              >
+                Читать статью <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="group">
+            <div class="relative overflow-hidden rounded-t-xl h-64">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Post"
+                class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+              />
+            </div>
+            <div class="bg-white p-6 rounded-b-xl shadow-md">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>5 июня 2023</span>
+                <span class="mx-2">•</span>
+                <span>7 мин. чтения</span>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition"
+              >
+                5 ключевых трендов кибербезопасности в 2023
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Разбираем главные угрозы цифровой безопасности и меры защиты для
+                малого и среднего бизнеса.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800"
+              >
+                Читать статью <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="group">
+            <div class="relative overflow-hidden rounded-t-xl h-64">
+              <img
+                src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                alt="Post"
+                class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+              />
+            </div>
+            <div class="bg-white p-6 rounded-b-xl shadow-md">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span>24 мая 2023</span>
+                <span class="mx-2">•</span>
+                <span>4 мин. чтения</span>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition"
+              >
+                Как выбрать между SPA и PWA для вашего бизнеса
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Сравниваем современные подходы к веб-разработке и помогаем
+                выбрать оптимальное решение.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center font-medium text-blue-600 hover:text-blue-800"
+              >
+                Читать статью <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <!-- CTA Section -->
     <section class="py-20 bg-gray-900 text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6 text-white">Готовы обсудить ваш проект?</h2>
-            <p class="text-xl text-gray-100 max-w-2xl mx-auto mb-10">Наши эксперты готовы ответить на ваши вопросы и предложить оптимальное решение для вашего бизнеса.</p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#contact" class="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-lg font-medium text-lg transition duration-300">Обсудить проект</a>
-                <a href="tel:+79222269772" class="bg-gray-700 text-white hover:bg-gray-800 border-2 border-gray-700 hover:border-gray-800 px-8 py-4 rounded-lg font-medium text-lg transition duration-300">
-                    <i class="fas fa-phone mr-2"></i> +7 922 226-97-72
-                </a>
-            </div>
+      <div class="container mx-auto px-6 text-center">
+        <h2
+          class="text-3xl md:text-5xl font-bold leading-tight mb-6 text-white"
+        >
+          Готовы обсудить ваш проект?
+        </h2>
+        <p class="text-xl text-gray-100 max-w-2xl mx-auto mb-10">
+          Наши эксперты готовы ответить на ваши вопросы и предложить оптимальное
+          решение для вашего бизнеса.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+        >
+          <a
+            href="#contact"
+            class="bg-blue-600 text-white hover:bg-blue-700 px-8 py-4 rounded-lg font-medium text-lg transition duration-300"
+            >Обсудить проект</a
+          >
+          <a
+            href="tel:+79222269772"
+            class="bg-gray-700 text-white hover:bg-gray-800 border-2 border-gray-700 hover:border-gray-800 px-8 py-4 rounded-lg font-medium text-lg transition duration-300"
+          >
+            <i class="fas fa-phone mr-2"></i> +7 922 226-97-72
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-blue-600 font-medium">СВЯЗАТЬСЯ С НАМИ</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-4">Давайте обсудим ваш проект</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Заполните форму ниже, и мы свяжемся с вами в ближайшее время, чтобы обсудить детали сотрудничества.</p>
-            </div>
-            
-            <div class="flex flex-col lg:flex-row bg-gray-50 rounded-xl overflow-hidden shadow-lg">
-                <div class="lg:w-1/2 p-8 lg:p-12">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Отправьте нам сообщение</h3>
-                    
-                    <form class="space-y-6" id="contact-form">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="name" class="block text-gray-700 font-medium mb-2">Имя*</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-gray-700 font-medium mb-2">Email*</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label for="phone" class="block text-gray-700 font-medium mb-2">Телефон</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        
-                        <div>
-                            <label for="service" class="block text-gray-700 font-medium mb-2">Интересующая услуга</label>
-                            <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                                <option value="">Выберите услугу</option>
-                                <option value="web">Веб-разработка</option>
-                                <option value="mobile">Мобильные приложения</option>
-                                <option value="cloud">Облачные решения</option>
-                                <option value="ai">Data Science & AI</option>
-                                <option value="security">Кибербезопасность</option>
-                                <option value="support">Техподдержка</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Сообщение*</label>
-                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
-                        </div>
-                        
-                        <div>
-                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">
-                                Отправить сообщение
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                
-                <div class="lg:w-1/2 bg-gray-800 text-white p-8 lg:p-12">
-                    <h3 class="text-2xl font-bold mb-6">Контактная информация</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="text-blue-400 mr-4 mt-1">
-                                <i class="fas fa-map-marker-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-lg mb-1">Адрес</h4>
-                                <p class="text-gray-300">115280, Москва, ул. Ленинская Слобода, 26</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="text-blue-400 mr-4 mt-1">
-                                <i class="fas fa-phone-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-lg mb-1">Телефон</h4>
-                                <p class="text-gray-300">+79222269772</p>
-                                <p class="text-gray-300">+79630330772</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="text-blue-400 mr-4 mt-1">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-lg mb-1">Email</h4>
-                                <p class="text-gray-300">info@glonect.ru</p>
-                                <p class="text-gray-300">seqa@glonect.ru</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="text-blue-400 mr-4 mt-1">
-                                <i class="fas fa-clock text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-lg mb-1">Режим работы</h4>
-                                <p class="text-gray-300">Пн-Пт: 9:00 - 18:00</p>
-                                <p class="text-gray-300">Сб-Вс: выходной</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-10">
-                        <h4 class="font-medium text-lg mb-4">Мы в соцсетях</h4>
-                        <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-blue-400 transition">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r from-purple-500 to-pink-500 transition">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-medium">СВЯЗАТЬСЯ С НАМИ</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mt-2 mb-4">
+            Давайте обсудим ваш проект
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Заполните форму ниже, и мы свяжемся с вами в ближайшее время, чтобы
+            обсудить детали сотрудничества.
+          </p>
         </div>
+
+        <div
+          class="flex flex-col lg:flex-row bg-gray-50 rounded-xl overflow-hidden shadow-lg"
+        >
+          <div class="lg:w-1/2 p-8 lg:p-12">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">
+              Отправьте нам сообщение
+            </h3>
+
+            <form class="space-y-6" id="contact-form">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Имя*</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email*</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label for="phone" class="block text-gray-700 font-medium mb-2"
+                  >Телефон</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+              </div>
+
+              <div>
+                <label
+                  for="service"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Интересующая услуга</label
+                >
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="">Выберите услугу</option>
+                  <option value="web">Веб-разработка</option>
+                  <option value="mobile">Мобильные приложения</option>
+                  <option value="cloud">Облачные решения</option>
+                  <option value="ai">Data Science & AI</option>
+                  <option value="security">Кибербезопасность</option>
+                  <option value="support">Техподдержка</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Сообщение*</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                ></textarea>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300"
+                >
+                  Отправить сообщение
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="lg:w-1/2 bg-gray-800 text-white p-8 lg:p-12">
+            <h3 class="text-2xl font-bold mb-6">Контактная информация</h3>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="text-blue-400 mr-4 mt-1">
+                  <i class="fas fa-map-marker-alt text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-lg mb-1">Адрес</h4>
+                  <p class="text-gray-300">
+                    115280, Москва, ул. Ленинская Слобода, 26
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-blue-400 mr-4 mt-1">
+                  <i class="fas fa-phone-alt text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-lg mb-1">Телефон</h4>
+                  <p class="text-gray-300">+79222269772</p>
+                  <p class="text-gray-300">+79630330772</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-blue-400 mr-4 mt-1">
+                  <i class="fas fa-envelope text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-lg mb-1">Email</h4>
+                  <p class="text-gray-300">info@glonect.ru</p>
+                  <p class="text-gray-300">seqa@glonect.ru</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="text-blue-400 mr-4 mt-1">
+                  <i class="fas fa-clock text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-lg mb-1">Режим работы</h4>
+                  <p class="text-gray-300">Пн-Пт: 9:00 - 18:00</p>
+                  <p class="text-gray-300">Сб-Вс: выходной</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-10">
+              <h4 class="font-medium text-lg mb-4">Мы в соцсетях</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-blue-400 transition"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r from-purple-500 to-pink-500 transition"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Map Section -->
     <div class="h-96 w-full">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.5279770964717!2d37.65737871593013!3d55.727191780550486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bd2c5bf6c4d%3A0xf16a83e4d3a8c369!2z0JvQtdC90LjQvdGB0LrQuNC5INGB0LvQvtCy0L7QtNGR0LIsIDI2LCDQnNC-0YHQutCy0LAsIDEzNTI4MA!5e0!3m2!1sru!2sru!4v1686673180938!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.5279770964717!2d37.65737871593013!3d55.727191780550486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54bd2c5bf6c4d%3A0xf16a83e4d3a8c369!2z0JvQtdC90LjQvdGB0LrQuNC5INGB0LvQvtCy0L7QtNGR0LIsIDI2LCDQnNC-0YHQutCy0LAsIDEzNTI4MA!5e0!3m2!1sru!2sru!4v1686673180938!5m2!1sru!2sru"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-6">
-                        <img src="1.jpg" alt="GLONECT Logo" class="h-10 w-auto">
-                        <span class="text-xl font-bold">GLONECT</span>
-                    </div>
-                    <p class="text-gray-400 mb-6">Компания полного цикла, специализирующаяся на разработке IT-решений для бизнеса любого масштаба.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-blue-400 transition">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r from-purple-500 to-pink-500 transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-6">Услуги</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Веб-разработка</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Мобильные приложения</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Облачные решения</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Data Science & AI</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Кибербезопасность</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Техподдержка</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-6">Компания</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">О нас</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Команда</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Карьера</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Портфолио</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Блог</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Контакты</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-6">Подписаться на новости</h3>
-                    <p class="text-gray-400 mb-4">Будьте в курсе наших новостей и актуальных предложений.</p>
-                    <form class="flex">
-                        <input type="email" placeholder="Ваш email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800">
-                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
+      <div class="container mx-auto px-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 hidden"
+        >
+          <div>
+            <div class="flex items-center space-x-2 mb-6">
+              <img src="1.jpg" alt="GLONECT Logo" class="h-10 w-auto" />
+              <span class="text-xl font-bold">GLONECT</span>
             </div>
-            
-            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2023 GLONECT. Все права защищены.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-400 hover:text-white transition">Политика конфиденциальности</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">Условия использования</a>
-                </div>
+            <p class="text-gray-400 mb-6">
+              Компания полного цикла, специализирующаяся на разработке
+              IT-решений для бизнеса любого масштаба.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-blue-400 transition"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r from-purple-500 to-pink-500 transition"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
             </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Услуги</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Веб-разработка</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Мобильные приложения</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Облачные решения</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Data Science & AI</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Кибербезопасность</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Техподдержка</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Компания</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >О нас</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Команда</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Карьера</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Портфолио</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Блог</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-6">Подписаться на новости</h3>
+            <p class="text-gray-400 mb-4">
+              Будьте в курсе наших новостей и актуальных предложений.
+            </p>
+            <form class="flex">
+              <input
+                type="email"
+                placeholder="Ваш email"
+                class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800"
+              />
+              <button
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
         </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0">
+            © 2023 GLONECT. Все права защищены.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition"
+              >Политика конфиденциальности</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition"
+              >Условия использования</a
+            >
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 rounded-full shadow-lg text-white hidden items-center justify-center">
-        <i class="fas fa-arrow-up"></i>
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 rounded-full shadow-lg text-white hidden items-center justify-center"
+    >
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <script>
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
-        
-        // Back to Top Button
-        const backToTopBtn = document.getElementById('back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.remove('hidden');
-                backToTopBtn.classList.add('flex');
-            } else {
-                backToTopBtn.classList.add('hidden');
-                backToTopBtn.classList.remove('flex');
-            }
-        });
-        
-        backToTopBtn.addEventListener('click', () => {
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
             window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
             });
-        });
-        
-        // Form Submission
-        const contactForm = document.getElementById('contact-form');
-        
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Here you can add form validation and AJAX submission
-                const formData = new FormData(this);
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    alert('Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.');
-                    this.reset();
-                }, 500);
-            });
-        }
-        
-        // Change navbar style on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
+
+            // Close mobile menu if open
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
             }
+          }
         });
+      });
 
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+      // Back to Top Button
+      const backToTopBtn = document.getElementById("back-to-top");
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.remove("hidden");
+          backToTopBtn.classList.add("flex");
+        } else {
+          backToTopBtn.classList.add("hidden");
+          backToTopBtn.classList.remove("flex");
+        }
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Form Submission
+      const contactForm = document.getElementById("contact-form");
+
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Here you can add form validation and AJAX submission
+          const formData = new FormData(this);
+
+          // Simulate form submission
+          setTimeout(() => {
+            alert(
+              "Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время."
+            );
+            this.reset();
+          }, 500);
+        });
+      }
+
+      // Change navbar style on scroll
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 100) {
+          header.classList.add("header-scrolled");
+        } else {
+          header.classList.remove("header-scrolled");
+        }
+      });
+
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all elements with scroll animation classes
+      document.addEventListener("DOMContentLoaded", () => {
+        const animatedElements = document.querySelectorAll(
+          ".scroll-fade-in, .scroll-scale-in"
+        );
+        animatedElements.forEach((el) => observer.observe(el));
+      });
+
+      // Smooth scroll with offset for fixed header
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            const headerHeight = document.querySelector("header").offsetHeight;
+            const targetPosition = targetElement.offsetTop - headerHeight;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
             });
-        }, observerOptions);
 
-        // Observe all elements with scroll animation classes
-        document.addEventListener('DOMContentLoaded', () => {
-            const animatedElements = document.querySelectorAll('.scroll-fade-in, .scroll-scale-in');
-            animatedElements.forEach(el => observer.observe(el));
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (mobileMenu && !mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
+            }
+          }
         });
-
-        // Smooth scroll with offset for fixed header
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - headerHeight;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
+      });
     </script>
-</body>
+  </body>
 </html>
